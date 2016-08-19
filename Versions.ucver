@@ -1,0 +1,35 @@
+// Версия - 21.04.2014
+const
+	UcButtonsVersion   	  = '19.12.2013';
+	UcExtCtrlsVersion  	  = '08.04.2014';
+    UcSkinVersion         = '08.05.2013';
+	UcDBGridVersion    	  = '20.03.2011';
+	UcTimerVersion 	   	  = '24.09.2009';
+	UcDBWorkerVersion  	  = '20.05.2011';
+	UcNetscapeSplitterVersion = '23.07.2010';
+	UcLabelVersion            = '13.02.2014';
+	UcFlowPanel		  = '22.10.2012';		
+{
+17.01.2014 - Добавлена совместимость с Delphi ниже 2009 в модуле ucdXmlRpc_Client.pas.
+19.12.2013 - Исправлена утечка ресурсов GDI в модуле UcButtons
+04.06.2013 - Добавлен модуль ucClassesEx
+25.04.2013 - У Кнопок добавлено свойство CaptionPositions.Layout
+25.04.2013 - У Кнопок добавлено свойство CaptionPositions.Padding
+06.12.2012 - Добавлены функции для работы с брендмауэром
+22.10.2012 - Добавлен компонент UcFlowPanel в UcExtControls
+03.10.2012 - Добавлена функция UC_CheckPlatform в ucOSUtils
+05.05.2012 - Добавлен модуль ucDialogsEx
+15.12.2011 - Добавлен модуль ucdXmlRpc_Server
+27.10.2011 - Добавлен модуль ucOSUtils
+26.10.2011 - Добавлен модуль ucUserAccessControlUtils
+13.10.2011 - Добавлен модуль ucCMD
+01.10.2011 - Добавлен компонент UcLabel
+10.07.2011 - Добавлен модуль ucProtect
+22.06.2011 - Добавлен модуль ucThreadHelper
+21.06.2011 - Добавлен модуль ucMasks
+01.06.2011 - Добавлены функции получения MD5 и CRC32 (см. ucFunctions)
+13.05.2011 - Добавлены модули ucXXTEA, ucBase64
+26.04.2011 - Добавлен модуль ucXmlRpc
+08.12.2010 - Разделен пакет установки для Delphi7 и Delphi2010
+16.06.2010 - Добавлена совместимость с Delphi 7
+}

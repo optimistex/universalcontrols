@@ -1,0 +1,11 @@
+Thumbs.db
+*.dcu
+*.~*
+*.bak
+*.7z
+modelsupport_*
+*.dproj.local
+output/*.elf
+output/*.map
+project/*.dsk
+project/*.identcache

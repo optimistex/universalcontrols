@@ -1,0 +1,174 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{A1D19275-CEAD-4740-BFE3-2E8DC86274F9}</ProjectGuid>
+			<MainSource>WMP.dpk</MainSource>
+			<ProjectVersion>12.0</ProjectVersion>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_DependencyCheckOutputName>C:\Documents and Settings\All Users\Документы\RAD Studio\7.0\Bpl\WMP.bpl</DCC_DependencyCheckOutputName>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<GenDll>true</GenDll>
+			<GenPackage>true</GenPackage>
+			<DCC_SYMBOL_PLATFORM>false</DCC_SYMBOL_PLATFORM>
+			<DCC_UNIT_PLATFORM>false</DCC_UNIT_PLATFORM>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_Platform>x86</DCC_Platform>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="WMP.dpk">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="WMPLib_TLB.dcr"/>
+			<DCCReference Include="rtl.dcp"/>
+			<DCCReference Include="vcl.dcp"/>
+			<DCCReference Include="WMPLib_TLB.pas"/>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>Package</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1049</VersionInfo>
+						<VersionInfo Name="CodePage">1251</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\All Users\Документы\RAD Studio\7.0\Bpl\dcldxCoreD14.bpl">ExpressCoreLibrary by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\All Users\Документы\RAD Studio\7.0\Bpl\dclcxLibraryD14.bpl">Express Cross Platform Library by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\All Users\Документы\RAD Studio\7.0\Bpl\dclcxEditorsD14.bpl">ExpressEditors Library 5 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxBarD14.bpl">ExpressBars by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dclcxPageControlD14.bpl">Express Cross Platform PageControl by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxOrgCD14.bpl">ExpressOrgChart by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dclcxPivotGridD14.bpl">ExpressPivotGrid 2 (VCL Edition) by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\All Users\Документы\RAD Studio\7.0\Bpl\dclcxSchedulerD14.bpl">ExpressScheduler 3 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\All Users\Документы\RAD Studio\7.0\Bpl\dxSkinscxPCPainterD14.bpl">ExpressSkins Library Painter for PageControl by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\All Users\Документы\RAD Studio\7.0\Bpl\dxSkinscxScheduler3PainterD14.bpl">ExpressSkins Library Painter for Scheduler 3 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\All Users\Документы\RAD Studio\7.0\Bpl\dxSkinsdxDLPainterD14.bpl">ExpressSkins Library Painter for Docking Library by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\All Users\Документы\RAD Studio\7.0\Bpl\dxSkinsdxBarPainterD14.bpl">ExpressSkins Library Painter for Bars by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\All Users\Документы\RAD Studio\7.0\Bpl\dxSkinsdxNavBar2PainterD14.bpl">ExpressSkins Library Painter for NavBar 2 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPSCoreD14.bpl">ExpressPrinting System 4 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPSTeeChartD14.bpl">ExpressPrinting System 4 ReportLink for TeeChart by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Documents and Settings\All Users\Документы\RAD Studio\7.0\Bpl\dcldxSkinsCoreD14.bpl">ExpressSkins Library by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxSkinsDesignHelperD14.bpl">ExpressSkins Library Uses Clause Auto Fill Helper by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dclcxExtEditorsD14.bpl">ExpressExtendedEditors Library 5 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxtrmdD14.bpl">ExpressTreePrintedDataSet by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dxSkinsdxRibbonPainterD14.bpl">ExpressSkins Library Painter for Ribbon by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxBarDBNavD14.bpl">ExpressBars DBNavigator by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxBarExtDBItemsD14.bpl">ExpressBars extended DB items by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxBarExtItemsD14.bpl">ExpressBars extended items by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxRibbonD14.bpl">ExpressBars Ribbon controls by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dclcxBarEditItemD14.bpl">ExpressBars cxEditor item by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxdbtrD14.bpl">ExpressDBTree by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxDockingD14.bpl">ExpressDocking Library by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxFlowChartD14.bpl">ExpressFlowChart by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxLayoutControlD14.bpl">ExpressLayout Control 2 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxNavBarD14.bpl">ExpressNavBar 2 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxDBOrD14.bpl">ExpressDBOrgChart by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dclcxGridD14.bpl">ExpressQuantumGrid 6 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dclcxPivotGridChartD14.bpl">ExpressPivotGrid 2 connection to ExpressQuantumGrid Chart View by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dclcxPivotGridOLAPD14.bpl">ExpressPivotGrid 2 OLAP by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dclcxTreeListD14.bpl">ExpressQuantumTreeList 5 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dclcxTreeListdxBarPopupMenuD14.bpl">ExpressQuantumTreeList 5 dxBar Built-In Menu by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dclcxSchedulerGridD14.bpl">ExpressScheduler 3 connection to ExpressQuantumGrid by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxSBD14.bpl">ExpressSideBar by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxSkinscxPCPainterD14.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for PageControl Painter by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxSkinscxScheduler3PainterD14.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for Scheduler 3 Painter by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxSkinsdxBarsPaintersD14.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for Bars Painters by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxSkinsdxNavBar2PainterD14.bpl">ExpressSkins Library Uses Clause Auto Fill Helper for NavBar 2 Painter by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxSpellCheckerD14.bpl">ExpressSpellChecker 2 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dclcxSpreadSheetD14.bpl">ExpressSpreadSheet by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dclcxVerticalGridD14.bpl">ExpressVerticalGrid by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPSLnksD14.bpl">ExpressPrinting System 4 ReportLinks (Standard) by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPScxCommonD14.bpl">ExpressPrinting System 4 Cross Platform Library by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPScxExtCommonD14.bpl">ExpressPrinting System 4 Extended Cross Platform Library by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPScxGrid6LnkD14.bpl">ExpressPrinting System 4 ReportLink for ExpressQuantumGrid 6 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPScxPivotGrid2LnkD14.bpl">ExpressPrinting System 4 ReportLink for ExpressPivotGrid 2 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPScxScheduler3LnkD14.bpl">ExpressPrinting System 4 ReportLink for ExpressScheduler 3 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPScxSSLnkD14.bpl">ExpressPrinting System 4 ReportLink for ExpressSpreadSheet by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPScxTL5LnkD14.bpl">ExpressPrinting System 4 ReportLink for ExpressQuantumTreeList 5 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPScxVGridLnkD14.bpl">ExpressPrinting System 4 ReportLink for ExpressVerticalGrid by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPSDBTeeChartD14.bpl">ExpressPrinting System 4 ReportLink for DBTeeChart by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPSdxOCLnkD14.bpl">ExpressPrinting System 4 ReportLinks for ExpressOrgChart by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPSdxDBOCLnkD14.bpl">ExpressPrinting System 4 ReportLinks for ExpressDBOrgChart by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPSdxDBTVLnkD14.bpl">ExpressPrinting System 4 ReportLink for ExpressDBTree by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPSdxFCLnkD14.bpl">ExpressPrinting System 4 ReportLinks for ExpressFlowChart by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPSdxLC2LnkD14.bpl">ExpressPrinting System 4 ReportLink for ExpressLayoutControl 2 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dcldxPSdxSkinsHelperD14.bpl">ExpressPrinting System 4 Uses Clause Auto Fill Helper for Skin Painters by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dxPScxPCProdD14.bpl">ExpressPrinting System 4 ContainerProducer for ExpressPageControl 2 by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dxPSPrVwAdvD14.bpl">ExpressPrinting System 4 Advanced Preview Window by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="C:\Program Files\DevExpress VCL\Library\Delphi14\dxPSPrVwRibbonD14.bpl">ExpressPrinting System 4 Ribbon Preview Window by Developer Express Inc.</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dcloffice2k140.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+					<Source>
+						<Source Name="MainSource">WMP.dpk</Source>
+					</Source>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

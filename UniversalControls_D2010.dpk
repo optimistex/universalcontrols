@@ -1,0 +1,96 @@
+package UniversalControls_D2010;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Компоненты. Полынцов Константин.'}
+{$IMPLICITBUILD OFF}
+{$DEFINE RELEASE}
+{$DEFINE EUREKALOG}
+{$DEFINE EUREKALOG_VER6}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  vcldb,
+  bdertl,
+  ibxpress,
+  dsnap,
+  vclie,
+  vclx,
+  vclactnband,
+  designide,
+  dclOfficeXP,
+  dclstd,
+  VclSmp;
+
+contains
+  RegExpr in 'foreign\RegExpr.pas',
+  uOpenOffice in 'foreign\uOpenOffice.pas',
+  md5 in 'foreign\md5.pas',
+  SZCRC32 in 'foreign\SZCRC32.pas',
+  UcButtons in 'vcl\UcButtons.pas',
+  UcDBGrids in 'vcl\UcDBGrids.pas',
+  ucDBWorker in 'vcl\ucDBWorker.pas',
+  ucExtCtrls in 'vcl\ucExtCtrls.pas',
+  UcNetscapeSplitter in 'vcl\UcNetscapeSplitter.pas',
+  UcReg in 'vcl\UcReg.pas',
+  ucStdCtrls in 'vcl\ucStdCtrls.pas',
+  UcTimer in 'vcl\UcTimer.pas',
+  ucAutoUpdate in 'Useful modules\ucAutoUpdate.pas',
+  ucBase64 in 'Useful modules\ucBase64.pas',
+  ucClasses in 'Useful modules\ucClasses.pas',
+  ucCMD in 'Useful modules\ucCMD.pas',
+  ucConsole in 'Useful modules\ucConsole.pas',
+  UcConsts in 'Useful modules\UcConsts.pas',
+  ucDBObjectProcs in 'Useful modules\ucDBObjectProcs.pas',
+  ucDBObjects in 'Useful modules\ucDBObjects.pas',
+  ucDialogs in 'Useful modules\ucDialogs.pas',
+  ucFileSystem in 'Useful modules\ucFileSystem.pas',
+  ucFunctions in 'Useful modules\ucFunctions.pas',
+  ucHint in 'Useful modules\ucHint.pas',
+  ucIDObjects in 'Useful modules\ucIDObjects.pas',
+  ucMasks in 'Useful modules\ucMasks.pas',
+  ucMDI in 'Useful modules\ucMDI.pas',
+  ucProtect in 'Useful modules\ucProtect.pas',
+  ucSQLGenerator in 'Useful modules\ucSQLGenerator.pas',
+  ucThreadHelper in 'Useful modules\ucThreadHelper.pas',
+  ucTimings in 'Useful modules\ucTimings.pas',
+  ucTypes in 'Useful modules\ucTypes.pas',
+  ucWindows in 'Useful modules\ucWindows.pas',
+  ucXmlRpc in 'Useful modules\ucXmlRpc.pas',
+  ucXXTEA in 'Useful modules\ucXXTEA.pas',
+  ucZibProcs in 'Useful modules\ucZibProcs.pas',
+  ucUACUtils in 'Useful modules\ucUACUtils.pas',
+  ucOSUtils in 'Useful modules\ucOSUtils.pas',
+  ucHotKeys in 'Useful modules\ucHotKeys.pas',
+  ucDialogsEx in 'Useful modules\ucDialogsEx.pas',
+  ucNetFwTypeLib_TLB in 'Useful modules\ucNetFwTypeLib_TLB.pas',
+  ucGraphics in 'Useful modules\ucGraphics.pas',
+  ucSkin in 'vcl\ucSkin.pas',
+  ucSkinEditor in 'vcl\ucSkinEditor.pas' {PaintInfoEditor},
+  ucHttpUtils in 'Useful modules\ucHttpUtils.pas',
+  ucClassesEx in 'Useful modules\ucClassesEx.pas';
+
+end.
+

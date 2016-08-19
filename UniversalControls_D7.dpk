@@ -1,0 +1,90 @@
+package UniversalControls_D7;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Компоненты. Полынцов Константин.'}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  dbrtl,
+  vcldb,
+  bdertl,
+  ibxpress,
+  dsnap,
+  vclie,
+  vclx,
+  vclactnband,
+  designide,
+  dclOfficeXP,
+  dclstd,
+  xmlrtl,
+  inet,
+  VclSmp,
+  PNG_D7;
+
+contains
+  RegExpr in 'foreign\RegExpr.pas',
+  uOpenOffice in 'foreign\uOpenOffice.pas',
+  ucAutoUpdate in 'Useful modules\ucAutoUpdate.pas',
+  ucClasses in 'Useful modules\ucClasses.pas',
+  UcConsts in 'Useful modules\UcConsts.pas',
+  ucFileSystem in 'Useful modules\ucFileSystem.pas',
+  ucHint in 'Useful modules\ucHint.pas',
+  ucSQLGenerator in 'Useful modules\ucSQLGenerator.pas',
+  ucTimings in 'Useful modules\ucTimings.pas',
+  ucWindows in 'Useful modules\ucWindows.pas',
+  ucZibProcs in 'Useful modules\ucZibProcs.pas',
+  UcButtons in 'vcl\UcButtons.pas',
+  UcDBGrids in 'vcl\UcDBGrids.pas',
+  ucDBWorker in 'vcl\ucDBWorker.pas',
+  ucExtCtrls in 'vcl\ucExtCtrls.pas',
+  UcNetscapeSplitter in 'vcl\UcNetscapeSplitter.pas',
+  UcReg in 'vcl\UcReg.pas',
+  UcTimer in 'vcl\UcTimer.pas',
+  ucMDI in 'Useful modules\ucMDI.pas',
+  ucBase64 in 'Useful modules\ucBase64.pas',
+  ucFunctions in 'Useful modules\ucFunctions.pas',
+  ucXmlRpc in 'Useful modules\ucXmlRpc.pas',
+  ucXXTEA in 'Useful modules\ucXXTEA.pas',
+  ucConsole in 'useful modules\ucConsole.pas',
+  SZCRC32 in 'foreign\SZCRC32.pas',
+  md5 in 'foreign\md5.pas',
+  ucMasks in 'Useful modules\ucMasks.pas',
+  ucThreadHelper in 'Useful modules\ucThreadHelper.pas',
+  ucDBObjectProcs in 'Useful modules\ucDBObjectProcs.pas',
+  ucDBObjects in 'Useful modules\ucDBObjects.pas',
+  ucIDObjects in 'Useful modules\ucIDObjects.pas',
+  ucTypes in 'Useful modules\ucTypes.pas',
+  ucProtect in 'Useful modules\ucProtect.pas',
+  ucStdCtrls in 'vcl\ucStdCtrls.pas',
+  ucCMD in 'Useful modules\ucCMD.pas',
+  ucUACUtils in 'Useful modules\ucUACUtils.pas',
+  ucDialogsEx in 'Useful modules\ucDialogsEx.pas',
+  ucSkinEditor in 'vcl\ucSkinEditor.pas',
+  ucSkin in 'vcl\ucSkin.pas',
+  ucGraphics in 'Useful modules\ucGraphics.pas',
+  ucCompatibilityD7withD2010 in 'Useful modules\ucCompatibilityD7withD2010.pas';
+
+end.
